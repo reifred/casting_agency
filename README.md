@@ -32,7 +32,7 @@ This will install all of the required packages we selected within the `requireme
 
 ## Running the server
 
-From within the `./backend` directory first ensure you are working using your created virtual environment.
+From within the project directory first ensure you are working using your created virtual environment.
 
 Each time you open a new terminal session, run:
 
@@ -83,12 +83,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
         - can `post:movies`
         - can `delete:movies`
 7. Test your endpoints with [Postman](https://getpostman.com).
-    - Register 3 users - assign the Casting Assistant role to one, Casting Director to another
-        and Executive Producer role to the other.
-    - Sign into each account and make note of the JWT.
-    - Import the postman collection `./starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json`
-    - Right-clicking the collection folder for Casting Assistant, Casting Director
-        and Executive Producer, navigate to the authorization tab, and including the
-        JWT in the token field (you should have noted these JWTs).
-    - Run the collection and correct any errors.
-    - Export the collection overwriting the one we've included so that we have your proper JWTs during review!
+    - Create a new machine to machine application called Casting Assistant.
+    - For each application created: Authorize the application by selecting at least one authorized API and         select permissions required.
+    - Take note of the client_id and client_secret of the different applications created. These are to be used
+      in the environment variables. Check the .env-example for more environment variables.
