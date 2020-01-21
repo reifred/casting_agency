@@ -1,8 +1,9 @@
 import json
 import unittest
 
-from ..app import app
-from ..tests import mock_data
+from app import app
+from tests import mock_data
+
 
 class AuthTestCase(unittest.TestCase):
 

@@ -40,6 +40,7 @@ def retrieve_actors():
     except Exception as error:
         raise error
 
+
 '''
 Retrieves a single actor by their ID.
 '''
@@ -57,6 +58,7 @@ def retrieve_actor(id):
     except Exception as error:
         raise error
 
+
 '''
 Creates a new actor.
 '''
@@ -73,6 +75,7 @@ def add_actor():
             }), 201
     except Exception as error:
         raise error
+
 
 '''
 Edits an actor's details.
@@ -94,6 +97,7 @@ def edit_actor(id):
             }), 200
     except Exception as error:
         raise error
+
 
 '''
 Deletes an actor.
@@ -174,7 +178,6 @@ def add_movie():
         raise error
 
 
-
 '''
 Edits a movie.
 '''
@@ -196,6 +199,7 @@ def edit_movie(id):
     except Exception as error:
         raise error
 
+
 '''
 Deletes a movie.
 '''
@@ -213,6 +217,7 @@ def delete_movie(id):
         }), 200
     except Exception as error:
         raise error
+
 
 '''
 Error handling for resource not found.

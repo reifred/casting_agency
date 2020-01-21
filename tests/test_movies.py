@@ -4,9 +4,9 @@ import unittest
 from flask_sqlalchemy import SQLAlchemy
 from datetime import date
 
-from ..app import app
-from ..app.models import setup_db, Actor, Movie
-from ..tests import mock_data
+from app import app
+from app.models import setup_db, Actor, Movie
+from tests import mock_data
 from .auth_setup import get_token
 
 
@@ -243,7 +243,7 @@ class MoviesTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(data['success'])
         self.assertEqual(data['movie']['id'], self.movie_id)
- 
+
     def test_edit_movie_with_invalid_movie_id(self):
         movie_id = 0  # invalid movie ID
         release_date = date(2020, 2, 9)
@@ -312,4 +312,3 @@ class MoviesTestCase(unittest.TestCase):
 
         self.assertEqual(response.status_code, 405)
         self.assertEqual(data, mock_data.not_allowed_error_response)
-    

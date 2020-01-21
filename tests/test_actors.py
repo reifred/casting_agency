@@ -3,9 +3,9 @@ import json
 import unittest
 from flask_sqlalchemy import SQLAlchemy
 
-from ..app import app
-from ..app.models import setup_db, Actor, Movie
-from ..tests import mock_data
+from app import app
+from app.models import setup_db, Actor, Movie
+from tests import mock_data
 from .auth_setup import get_token
 
 assistant_token = get_token('assistant')
@@ -27,9 +27,10 @@ class ActorsTestCase(unittest.TestCase):
             self.db.init_app(self.app)
             self.db.create_all()
             # Add an actor
-            self.actor = Actor(name="Mugerwa Fred",
-                                dob='1996-05-07',
-                                gender="male")
+            self.actor = Actor(
+                name="Mugerwa Fred",
+                dob='1996-05-07',
+                gender="male")
             self.actor.insert()
             self.actor_id = self.actor.id
 
@@ -295,4 +296,3 @@ class ActorsTestCase(unittest.TestCase):
 
         self.assertEqual(response.status_code, 422)
         self.assertEqual(data, mock_data.unprocessable_error_response)
-
