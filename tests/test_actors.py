@@ -3,7 +3,7 @@ import json
 import unittest
 from flask_sqlalchemy import SQLAlchemy
 
-from ..app.api import app
+from ..app import app
 from ..app.models import setup_db, Actor, Movie
 from ..tests import mock_data
 from .auth_setup import get_token

@@ -6,8 +6,8 @@ from flask_cors import CORS
 from dateutil.parser import parse
 
 from flask import Flask, request, jsonify, abort
-from .models import Actor, Movie, setup_db
-from ..auth.auth import requires_auth, AuthError
+from app.models import Actor, Movie, setup_db
+from auth.auth import requires_auth, AuthError
 
 app = Flask(__name__)
 setup_db(app)
